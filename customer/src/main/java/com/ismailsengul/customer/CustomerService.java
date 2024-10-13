@@ -1,7 +1,8 @@
 package com.ismailsengul.customer;
 
-import com.example.clients.fraud.FraudCheckResponse;
-import com.example.clients.fraud.FraudClient;
+import com.ismailsengul.clients.fraud.FraudCheckRequest;
+import com.ismailsengul.clients.fraud.FraudCheckResponse;
+import com.ismailsengul.clients.fraud.FraudClient;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,12 @@ public class CustomerService {
 
         customerRepository.saveAndFlush(customer);
 
-        FraudCheckResponse fraudCheckResponse = fraudClient.isFraudster(customer.getId());
+        FraudCheckResponse fraudCheckResponse = fraudClient
+                .isFraudster(new FraudCheckRequest(
+                        customer.getId(),
+                        customer.getEmail(),
+                        customer.getFirstName()
+                ));
 
         if (fraudCheckResponse.isFraudster()){
             throw new IllegalStateException("fraudster");

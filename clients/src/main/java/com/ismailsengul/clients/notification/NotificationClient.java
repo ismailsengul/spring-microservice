@@ -1,4 +1,4 @@
-package com.example.clients.notification;
+package com.ismailsengul.clients.notification;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;

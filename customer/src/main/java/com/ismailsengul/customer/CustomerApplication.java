@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients(
-        basePackages = "com.example.clients"
+        basePackages = "com.ismailsengul.clients"
 )
 public class CustomerApplication {
     public static void main(String[] args) {

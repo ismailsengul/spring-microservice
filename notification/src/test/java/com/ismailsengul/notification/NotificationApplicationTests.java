@@ -1,13 +1,13 @@
-package com.example.fraud;
+package com.ismailsengul.notification;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FraudApplicationTests {
+class NotificationApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

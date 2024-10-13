@@ -1,4 +1,4 @@
-package com.example.springmicroservice;
+package com.ismailsengul.springmicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
